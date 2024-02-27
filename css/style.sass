@@ -1,0 +1,464 @@
+$color1: #313131
+
+* 
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    
+
+body
+    // max-width: 1920px
+    width: 100vw
+    font-family: 'Golos Text', sans-serif
+    font-size: 20px
+    font-weight: 400
+    line-height: 24px
+    color: $color1
+    @media (min-width: 1921px) 
+        // max-width: 1920px
+        margin: 0 auto
+
+a
+    text-decoration: none
+
+h1, h2, h3, .title 
+    font-family: 'Merriweather', serif
+    font-weight: 400
+    text-transform: uppercase
+    font-size: 54px
+    color: $color1
+    line-height: 64.8px
+
+.titles
+    position: relative
+    span
+        max-width: 280px
+        position: absolute
+        top: 72px
+        left: 300px
+        
+
+.text_blue
+    color: #3057A2   
+    font-size: 20px
+    line-height: 24px
+
+.stages__title 
+    width: 800px
+    font-size: 54px
+    line-height: 65px
+    letter-spacing: -1px
+    margin-bottom: 54px
+    
+.container 
+    max-width: 1222px
+    margin-left: auto
+    margin-right: auto
+    height: 100%
+    @media (max-width: 480px)
+        width: 335px
+
+
+.header 
+    width: 100%
+    height: 700px
+    background-color: #E9DED4
+    background-repeat: no-repeat //
+    background-position: center  //
+    z-index: 2
+    &::before
+        left: 5px
+    &::after
+        right: -5px
+
+.header:before,
+.header:after 
+  position: absolute
+  top: 0
+  width: calc((100vw - 1920px) / 2)
+  height: 700px
+  content: ""
+  z-index: 1
+  background-image: url(../img/mask.png)
+  
+    
+.layers 
+    width: 100%
+    overflow: hidden
+    perspective: 1000px
+
+.layers__container
+    height: 700px
+    transform-style: preserve-3d
+    position: relative
+
+.layers__item
+    position: absolute
+    inset: 0px
+    background-size: contain
+    background-repeat: no-repeat
+
+.layer1
+    z-index: 1
+    width: 776.49px
+    height: 776.49px
+    left: 892.76px
+    top: -102.24px
+
+.layer2
+    z-index: 2
+
+.layer3 
+    z-index: 3
+    // background-position-y: bottom
+    // width: 1603.71px
+    // left: 158px
+    width: 1920px
+
+.layer4
+    z-index: 4
+    opacity: 0.1
+    background-size: cover
+
+.layer5
+    z-index: 5
+
+.pawn 
+    width: 82.61px
+    top: 558px
+    left: 1514.5px
+    opacity: 0
+    transform: translateY(-400%)
+
+.horse
+    top: 482px
+    left: 1113.5px
+    opacity: 0
+    transform: translateY(-120%)
+
+.pawn.anim, .horse.anim
+    opacity: 1
+    transform: translateX(0)
+    transition: all 1s
+
+.logo 
+    margin-bottom: 62px
+    margin-top: 26px
+    display: flex
+
+.logo__text
+    display: flex   
+    flex-direction: column
+    span
+        text-transform: uppercase
+        font-weight: 700
+        font-size: 16.65px
+        line-height: 17.98px
+        color: #595653
+
+.header__content 
+    max-width: 542px
+
+.header__title 
+    margin-bottom: 24px
+    span
+        display: block
+        width: 100%
+        font-size: 60px
+        line-height: 66px
+
+.second-line
+    text-align: center
+
+.third-line
+    text-align: right
+
+.header__text
+    text-align: center
+    margin-bottom: 40px
+
+.header__buttons
+    display: flex
+    justify-content: space-between
+
+.header__detail 
+    width: 263px
+    padding: 20px 49px
+    border-radius: 66px
+    border: 2px solid #1F1F1F
+    text-decoration: none
+    color: #1F1F1F
+    font-size: 16px
+    font-weight: 500
+    line-height: 20.8px
+    text-align: center
+
+.header__detail_black
+    color: white
+    background-color: #1F1F1F
+
+.support
+    margin-bottom: 200px
+
+.support__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 64px
+
+.titles__text
+    max-width: 764px
+
+.suppotr__title
+    font-size: 36px
+    line-height: 48.6px
+    span
+        color: #F54932
+
+.support__content
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+
+.support-content__title
+    margin-bottom: 60px
+
+.support__img
+    position: relative
+    left: -27px
+
+.content__container
+    min-width: 704px
+    
+
+.support__table
+    border-collapse: collapse
+    height: 248px
+    margin-bottom: 48px
+
+th
+    width: 306px
+    height: 24px
+    text-align: start
+    border: 2px solid #D0D0D0
+    border-top: none
+    border-bottom: none
+    padding-top: 16px
+    padding-bottom: 16px
+    line-height: 24px
+    &:first-child 
+        border-left: none
+        opacity: .6
+    &:last-child 
+        width: 382px
+        font-weight: 600
+        padding-left: 16px
+        border-right: none
+
+tr
+    overflow: hidden
+    height: 24px
+    white-space: nowrap
+    border: 2px solid #D0D0D0
+    border-left: none
+    border-right: none
+    &:first-child
+        th
+            padding-top: 0
+        border-top: none
+    &:last-child
+        th
+            padding-bottom: 0
+        border-bottom: none
+
+.text_
+    font-weight: 600
+    position: relative
+    margin-right: 12px
+    &::after
+        content: ''
+        border-bottom: 2px solid #F54932
+        border-radius: 4px
+        position: absolute
+        top: 50%
+        left: 0
+        width: 100%
+
+
+.stages-container
+    position: relative 
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    gap: 20px
+    margin-bottom: 200px
+
+.stage
+    background-image: url(../img/Paper.png)
+    padding-top: 20px
+    padding-right: 20px
+    padding-bottom: 20px
+    padding-left: 72px
+    position: relative
+
+    
+.stage3 
+    grid-row: span 2
+
+.stage7 
+    grid-column: span 2
+
+.stage__number
+    width: 36px
+    height: 36px
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 20px
+    left: 20px
+    font-weight: 600
+    background: white
+    border-radius: 50%
+
+    
+.stage__p_plane 
+    width: 400px
+
+.plane 
+    position: absolute
+    right: -56px
+    bottom: -20px
+
+.player
+    margin-bottom: 140px
+
+.player .container
+    position: relative
+    overflow: hidden 
+
+
+.player__title
+    margin-bottom: 60px
+
+.player__carousel
+    display: flex
+    transition: transform 0.5s ease
+
+.player__card 
+    width: 320px
+    flex: 0 0 33.33%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.player__img
+    margin-bottom: 28px
+
+.player__name
+    font-size: 24px
+    font-weight: 600
+    line-height: 28.8px
+    margin-bottom: 6px
+    
+
+.player__dignity
+    opacity: 0.6
+    margin-bottom: 20px
+
+.player__detail
+    text-decoration: none
+    color: #3057A2
+    border: 1px solid #3057A2
+    border-radius: 62px
+    font-size: 16px
+    font-weight: 500
+    line-height: 19.2px
+    padding: 12px
+
+.carousel
+    display: flex
+    align-items: center
+    position: absolute
+    top: 0
+    right: 0
+
+.carousel__numbers
+    padding: 0 14px
+
+.number__total
+    opacity: 0.6
+
+.carousel__button 
+    width: 44px
+    height: 44px
+    border-radius: 50%
+    border: none
+    background-color: #313131
+    color: white
+    cursor: pointer
+
+.footer
+    width: 100%
+    padding-top: 40px
+    background-color: #E9DED4
+
+.footer__text
+    opacity: 0.6
+    padding-bottom: 72px
+
+@keyframes slide 
+  from 
+    transform: translateX(0)
+  
+  to 
+    transform: translateX(-100%)
+  
+
+
+.logos 
+  overflow: hidden
+  height: 60px
+  background: #F54932
+  white-space: nowrap
+  position: relative
+  margin-bottom: 200px
+  display: flex
+  align-items: center
+  font-family: 'Merriweather', serif
+  font-size: 22px
+  line-height: 24.5px
+  text-transform: uppercase
+
+.logos:before,
+.logos:after 
+  position: absolute
+  top: 0
+  width: calc((100vw - 1920px) / 2)
+  height: 100%
+  content: ""
+  z-index: 2
+
+
+// .logos:before {
+//   left: 0;
+//   background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(222, 26, 26));
+
+// .logos:after 
+//   right: 0
+//   background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(222, 26, 26))
+
+
+.logos-slide 
+  display: inline-block
+  animation: 15s slide infinite linear
+  
+
+
+.logos__item 
+  color: white
+  display: inline-block
+  vertical-align: middle
+  margin: 0 6px
+
+
